@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
-
+//comentariu
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
