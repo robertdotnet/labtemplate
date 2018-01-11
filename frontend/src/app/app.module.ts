@@ -1,3 +1,5 @@
+import { HomeComponent } from './components/pages/home/home.component';
+import { RouterModule, Routes } from '@angular/router';
 // CORE
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,8 +16,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components';
-
 // used to create fake backend
 import { fakeBackendProvider } from './service';
 import { MockBackend, MockConnection } from '@angular/http/testing';
@@ -23,6 +23,18 @@ import { BaseRequestOptions } from '@angular/http';
 import { NavigationbarComponent } from './components/navigationbar/navigationbar.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { LoginFormComponent } from './components/pages/login/login-form/login-form.component';
+
+
+const appRoutes:Routes=[
+  {
+    path:'',
+    component:LoginFormComponent
+  },
+  {
+    path:'home',
+    component:HomeComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -33,6 +45,7 @@ import { LoginFormComponent } from './components/pages/login/login-form/login-fo
     LoginFormComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
