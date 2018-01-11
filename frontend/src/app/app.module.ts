@@ -21,12 +21,16 @@ import { fakeBackendProvider } from './service';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
 import { NavigationbarComponent } from './components/navigationbar/navigationbar.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { LoginFormComponent } from './components/pages/login/login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavigationbarComponent
+    NavigationbarComponent,
+    LoginComponent,
+    LoginFormComponent
   ],
   imports: [
     AppRoutingModule,
