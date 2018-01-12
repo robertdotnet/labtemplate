@@ -5,12 +5,36 @@
 	align-items: center;
 }
 
+#container {
+    width:100%;
+    text-align:center;
+}
+
+#left {
+    float:left;
+    width:100px;
+}
+
+#center {
+    display: inline-block;
+    margin:0 auto;
+    width:100px;
+}
+
+#right {
+    float:right;
+    width:100px;
+}
+
+#label1 { display: block; width: 155px; }
+
 div.input{
     position: relative;
+    
 }
 
 div.input label{
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'Times New Roman', Times, serif;
     position:absolute;
     top:1px;
@@ -18,6 +42,7 @@ div.input label{
     transform: translateY(-50%);
     background: rgb(255, 255, 255);
     padding: 5px 2px;
+    
 }
 
 div.input input {
@@ -31,5 +56,7 @@ div.input {
 }
 
 form {
-    margin: 4cm 4cm 4cm 4cm;
+
+    margin: 3cm 4cm 4cm 4cm;
 }
+

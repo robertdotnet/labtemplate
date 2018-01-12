@@ -36,7 +36,7 @@ const appRoutes:Routes=[
   },
   {
     path:'login',
-    component:LoginFormComponent
+    component:LoginComponent
   }
 ]
 
