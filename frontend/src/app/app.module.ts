@@ -23,6 +23,7 @@ import { BaseRequestOptions } from '@angular/http';
 import { NavigationbarComponent } from './components/navigationbar/navigationbar.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { LoginFormComponent } from './components/pages/login/login-form/login-form.component';
+import { AboutComponent } from './components/pages/about/about.component';
 
 
 const appRoutes:Routes=[
@@ -37,6 +38,10 @@ const appRoutes:Routes=[
   {
     path:'login',
     component:LoginComponent
+  },
+  {
+    path:'about',
+    component:AboutComponent
   }
 ]
 
@@ -46,7 +51,8 @@ const appRoutes:Routes=[
     HomeComponent,
     NavigationbarComponent,
     LoginComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    AboutComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
