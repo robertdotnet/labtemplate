@@ -23,6 +23,8 @@ import { BaseRequestOptions } from '@angular/http';
 import { NavigationbarComponent } from './components/navigationbar/navigationbar.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { LoginFormComponent } from './components/pages/login/login-form/login-form.component';
+import { ContactusFormComponent } from './components/pages/contactus/contactus-form/contactus-form.component';
+import { ContactusComponent } from './components/pages/contactus/contactus.component';
 
 
 const appRoutes:Routes=[
@@ -37,6 +39,10 @@ const appRoutes:Routes=[
   {
     path:'login',
     component:LoginComponent
+  },
+  {
+    path:'contactus',
+    component:ContactusComponent
   }
 ]
 
@@ -46,7 +52,8 @@ const appRoutes:Routes=[
     HomeComponent,
     NavigationbarComponent,
     LoginComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    ContactusFormComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
