@@ -53,6 +53,7 @@ const appRoutes:Routes=[
     NavigationbarComponent,
     LoginComponent,
     LoginFormComponent,
+    ContactusComponent,
     ContactusFormComponent,
   ],
   imports: [
