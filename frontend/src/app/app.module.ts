@@ -24,6 +24,9 @@ import { NavigationbarComponent } from './components/navigationbar/navigationbar
 import { LoginComponent } from './components/pages/login/login.component';
 import { LoginFormComponent } from './components/pages/login/login-form/login-form.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { ContactusFormComponent } from './components/pages/contactus/contactus-form/contactus-form.component';
+import { ContactusComponent } from './components/pages/contactus/contactus.component';
 
 
 const appRoutes:Routes=[
@@ -43,8 +46,16 @@ const appRoutes:Routes=[
   {
     path:'FAQ',
     component:FaqComponent
-  }
+  },{
 
+    path:'about',
+    component:AboutComponent
+  }
+  ,
+  {
+    path:'contactus',
+    component:ContactusComponent
+  },
 ]
 
 @NgModule({
@@ -54,7 +65,11 @@ const appRoutes:Routes=[
     NavigationbarComponent,
     LoginComponent,
     LoginFormComponent,
-    FaqComponent
+    FaqComponent,
+    AboutComponent,
+    ContactusComponent,
+    ContactusFormComponent,
+
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
