@@ -27,6 +27,7 @@ import { FaqComponent } from './components/pages/faq/faq.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { ContactusFormComponent } from './components/pages/contactus/contactus-form/contactus-form.component';
 import { ContactusComponent } from './components/pages/contactus/contactus.component';
+import { TravelComponent } from './components/pages/travel/travel.component';
 
 
 const appRoutes:Routes=[
@@ -38,7 +39,10 @@ const appRoutes:Routes=[
     path:'home',
     component:HomeComponent
   },
-  
+  {
+    path:'travelroutes',
+    component:TravelComponent
+  },
   {
     path:'login',
     component:LoginComponent
@@ -69,6 +73,7 @@ const appRoutes:Routes=[
     AboutComponent,
     ContactusComponent,
     ContactusFormComponent,
+    TravelComponent,
 
   ],
   imports: [
