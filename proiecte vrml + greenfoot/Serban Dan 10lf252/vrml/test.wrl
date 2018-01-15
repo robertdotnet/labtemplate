@@ -1,0 +1,511 @@
+#VRML V2.0 utf8
+WorldInfo {
+   title "Webolics Tutorial Example"
+   info ["(C) Copyright 2002 Webolics"
+         "atifmuqeet@hotmail.com"]
+}
+
+
+DEF luna Group{
+children[
+Transform {
+	scale 150 150 150
+   translation 500 800 -2500
+   children [
+Inline {
+url ["earth.wrl"]
+bboxCenter 1 1 1
+      }
+     ]
+}
+]
+}
+
+SpotLight {
+on TRUE
+intensity 10
+ambientIntensity 0
+color 1 1 1
+location 400 800 -2500
+direction 0 0 0
+attenuation 1 0 0
+radius 1000
+cutOffAngle 0
+beamWidth 1.57
+}
+
+
+
+
+DEF masina Group{
+children[
+DEF testul Transform {
+	rotation 0 1 0 3.14
+	scale 0.5 0.5 0.5
+   translation 0 -4 6
+   children [
+Inline {
+url ["83_camaro.wrl"]
+bboxCenter 1 1 1
+      }
+     ]
+}
+]
+}
+
+
+DEF cow Group{
+children[
+Transform {
+	scale 1 1 1
+	
+   translation 0 -5 20
+   children [
+Inline {
+url ["cow.wrl"]
+bboxCenter 1 1 1
+      }
+     ]
+}
+]
+}
+
+
+
+Transform{
+	translation 40 0 0
+	children USE masina
+}
+
+
+DEF copacul Group{
+
+#trunchi
+children[
+Transform {
+   translation -4 0 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "trunchi.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 0.5
+            height 10
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+
+
+# copac
+
+	
+
+
+Transform {
+   translation -4 -1.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 5
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation -4 -0.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 4.5
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation -4 0.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 4
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation -4 1.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 3.5
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation -4 2.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 3
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation -4 3.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 2.5
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+]
+}
+
+
+
+# inca 2 copaci
+
+Transform{
+
+translation 20 0 0
+children USE copacul
+}
+
+
+Transform{
+
+translation 17 0 -5
+children USE copacul
+}
+
+
+# omul de zapada
+
+
+
+
+
+Background {
+skyAngle [ 0.0 0.0]
+skyColor [0 0 1, 0 0 0.6, 1 0 0]
+groundColor [0.5 0.5 0.0]
+backUrl "space1.jpg"
+rightUrl "space1.jpg"
+leftUrl "space1.jpg"
+frontUrl "space1.jpg"
+}
+
+
+Transform {
+   translation 0 -5 0
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "snow.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Box {
+            size 200 0.1 200
+         }
+      }
+   ]
+}
+
+
+
+
+Transform {
+   translation -10 -4.9 8
+   children [
+      DEF drum_2 Shape {
+         appearance Appearance {
+			
+            texture ImageTexture {
+               url "drumul.jpg"
+               repeatS TRUE
+               repeatT TRUE
+			   
+            }
+         }
+         geometry Box {
+            size 20 0.1 10
+         }
+      }
+   ]
+}
+
+Transform{
+	translation -30 -4.9 8
+	children USE drum_2
+}
+
+Transform{
+	translation -50 -4.9 8
+	children USE drum_2
+}
+
+Transform{
+	translation -70 -4.9 8
+	children USE drum_2
+}
+
+Transform{
+	translation -90 -4.9 8
+	children USE drum_2
+}
+
+Transform{
+	translation 10 -4.9 8
+	children USE drum_2
+}
+
+Transform{
+	translation 30 -4.9 8
+	children USE drum_2
+}
+
+Transform{
+	translation 50 -4.9 8
+	children USE drum_2
+}
+
+Transform{
+	translation 70 -4.9 8
+	children USE drum_2
+}
+
+Transform{
+	translation 90 -4.9 8
+	children USE drum_2
+}
+
+Transform{
+	translation -25 0 21
+	rotation 0 1 0 1.16
+	children USE cow
+}
+
+
+Transform {
+   translation 0 3 2.01
+   children [
+      Shape {
+         appearance Appearance {
+            material Material {
+               diffuseColor 0 1 0
+            }
+         }
+         geometry Text {
+            string "Sarbatori fericite!!!"
+            fontStyle FontStyle {
+               size 0.8
+               justify "MIDDLE"
+            }
+         }
+      }
+   ]
+}
+
+
+Transform {
+   translation 200 800 -2500
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "moon.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Sphere {
+            radius 60
+            
+         }
+      }
+   ]
+}
+
+
+DEF omz Group{
+children[
+Transform {
+	scale 0.75 0.75 0.75
+   translation 4 -2.7 -5
+   children [
+Inline {
+url ["OmZapada.vrml"]
+bboxCenter 1 1 1
+      }
+     ]
+}
+]
+}
+
+
+
+DEF trasura Group{
+children[
+Transform {
+	rotation 0 1 0 3.1416
+	scale .75 .75 .75
+   translation 4 -4 30
+   children [
+Inline {
+url ["caruta.vrml"]
+bboxCenter 1 1 1
+      }
+     ]
+}
+]
+}
+
+DEF Masina_mea Transform {
+	scale 1.2 1.2 1.2
+
+   translation -100 -4.4 10
+   children [
+Inline {
+url ["masina.vrml"]
+bboxCenter 1 1 1
+      }
+     ]
+}
+
+
+#animatie masina 1
+
+DEF timer TimeSensor{
+	cycleInterval 30
+	startTime 0
+	stopTime 0
+	loop TRUE
+}
+
+DEF animatieMasina PositionInterpolator{
+	key[0  1]
+	keyValue[
+	-100 -4.35 10
+	100 -4.35 10
+	]
+}
+
+ROUTE timer.fraction_changed TO animatieMasina.set_fraction
+ROUTE animatieMasina.value_changed TO Masina_mea.translation
+
+
+#animatie masina 2
+DEF timer2 TimeSensor{
+	cycleInterval 4
+	startTime 0
+	stopTime 0
+	loop TRUE
+}
+
+DEF animatieMasina2 PositionInterpolator{
+	key[0  1]
+	keyValue[
+	100 -4 6
+	-100 -4 6
+	]
+}
+
+ROUTE timer2.fraction_changed TO animatieMasina2.set_fraction
+ROUTE animatieMasina2.value_changed TO testul.translation

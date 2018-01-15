@@ -1,0 +1,95 @@
+#VRML V2.0 utf8
+
+DEF tree Group{
+
+children[
+Shape {
+    appearance Appearance {
+        material Material { emissiveColor  .41 .40 .1 }
+    }
+    geometry Cylinder {
+        radius .25
+        height 1
+    }
+}
+# The leaves. Firstly the bottom cone.
+Transform {
+    translation 0 1 0
+    rotation 0 0 1 0.1
+    center 0 -0.75 0
+    children [
+        Shape {
+            appearance Appearance {
+			texture ImageTexture {
+							url "leaves.jpg"}
+               material Material { emissiveColor .1 .6 .1 }
+            }
+            # Default cone values look good
+            geometry Cone {}
+        }
+
+        # Now put in the second cone
+        Transform {
+            translation 0 .75 0
+            rotation 0 0 1 .1
+            center 0 -.375 0
+            children [
+                Shape {
+                    appearance Appearance {
+						texture ImageTexture {
+							url "leaves.jpg"}
+                        material Material { emissiveColor .1 .6 .1 }
+                    }
+                    geometry Cone {
+                        bottomRadius .8
+                        height 1.5
+                    }
+                }
+            ]
+        }
+		
+		#third cone
+		Transform {
+            translation 0 .45 0
+            rotation 0 0 1 .1
+            center 0 -.375 0
+            children [
+                Shape {
+                    appearance Appearance {
+					texture ImageTexture {
+							url "leaves.jpg"}
+                        material Material { emissiveColor .1 .6 .1 }
+                    }
+                    geometry Cone {
+                        bottomRadius .8
+                        height 1.5
+                    }
+                }
+            ]
+        }
+		
+		Transform {
+            translation 0 .10 0
+            rotation 0 0 1 .1
+            center 0 -.375 0
+            children [
+                Shape {
+                    appearance Appearance {
+					texture ImageTexture {
+							url "leaves.jpg"}
+                        material Material { emissiveColor .1 .6 .1 }
+                    }
+                    geometry Cone {
+                        bottomRadius .9
+                        height 1.3
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+]
+
+
+}

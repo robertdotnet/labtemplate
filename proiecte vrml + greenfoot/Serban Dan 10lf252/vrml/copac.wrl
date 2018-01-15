@@ -1,0 +1,181 @@
+#VRML V2.0 utf8
+WorldInfo {
+   title "ModelCopac"
+  
+}
+
+
+
+
+
+#trunchi
+
+Transform {
+   translation -4 0 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "trunchi.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 0.5
+            height 10
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+
+
+# copac
+
+	
+
+
+
+Transform {
+   translation -4 -1.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 5
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation -4 -0.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 4.5
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation -4 0.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 4
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation -4 1.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 3.5
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation -4 2.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 3
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation -4 3.5 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "pine.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 2.5
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
