@@ -1,0 +1,43 @@
+#VRML V2.0 utf8
+
+
+Sound {
+   source AudioClip {
+      url [ "car_m.mp3" ]
+      loop TRUE
+	startTime 0
+	stopTime 0
+   }
+   spatialize TRUE
+   intensity 20
+   minFront 10
+   maxFront 30
+   minBack 10
+   maxBack 30
+}
+
+
+Transform {
+	scale 0.75 0.75 0.75
+	rotation 1 0 0 -1.57
+   translation 0 0 0
+   children [
+Inline {
+url ["pickup.wrl"]
+bboxCenter 1 1 1
+      }
+     ]
+}
+
+
+Transform {
+	scale 0.2 0.2 0.2
+	rotation 0 1 0 -1.57
+   translation -3.5 1.5 0
+   children [
+Inline {
+url ["beethoven.wrl"]
+bboxCenter 1 1 1
+      }
+     ]
+}

@@ -1,0 +1,200 @@
+#VRML V2.0 utf8
+
+
+
+Transform {
+   translation 0 0 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "snow.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Sphere {
+            radius 5.5
+            
+         }
+      }
+   ]
+}
+
+
+Transform {
+   translation 0 7 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "snow.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Sphere {
+            radius 4
+            
+         }
+      }
+   ]
+}
+
+
+Transform {
+   translation 0 12 0
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "snow.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Sphere {
+            radius 2.5
+            
+         }
+      }
+   ]
+}
+
+
+Transform {
+   translation -1 12 2.2
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "ochi.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Sphere {
+            radius 0.4
+            
+         }
+      }
+   ]
+}
+
+
+Transform {
+   translation 1 12 2
+   children [
+      Shape {
+         appearance Appearance {
+			
+            material Material {
+               diffuseColor 0 0 0
+            }
+         }
+         geometry Sphere {
+            radius 0.6
+            
+         }
+      }
+   ]
+}
+
+Transform {
+	rotation 0 0 1 -0.52
+   translation 0.3 12.4 0
+   children [
+      Shape {
+         appearance Appearance {
+			   material Material {
+               diffuseColor 0 0 0
+            }
+         }
+         geometry Cylinder {
+            radius 2.51
+			height 0.1
+            
+         }
+      }
+   ]
+}
+
+
+Transform {
+	rotation 1 0 0  1.66
+   translation 0 11.5 3.6
+   children [
+      Shape {
+         appearance Appearance {
+				texture ImageTexture {
+				url "morcov.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+			   material Material {
+               diffuseColor 255 10 0
+            }
+         }
+         geometry Cone {
+            bottomRadius 0.5
+			height 3
+            
+         }
+      }
+   ]
+}
+
+
+Transform {
+	rotation 0 0 1  0.70
+   translation 5 5.5 1.5
+   children [
+      Shape {
+         appearance Appearance {
+				texture ImageTexture {
+				url "bandaj.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+			   material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         
+            geometry Cylinder {
+            radius 0.4
+			height 7
+            
+         }
+      }
+   ]
+}
+
+
+Sound {
+   source AudioClip {
+      url [ "craciun.mp3" ]
+      loop TRUE
+	startTime 0
+	stopTime 0
+   }
+   spatialize TRUE
+   intensity 20
+   minFront 10
+   maxFront 30
+   minBack 10
+   maxBack 30
+}
+

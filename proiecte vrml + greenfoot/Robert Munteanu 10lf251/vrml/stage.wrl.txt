@@ -1,0 +1,16 @@
+#VRML V2.0 utf8
+
+DEF stage Group{
+
+children[
+Shape {
+    appearance Appearance {
+        material Material { emissiveColor  .41 .40 .1 }
+    }
+    geometry Box {
+        size 6 6 6
+    }
+}
+
+
+}

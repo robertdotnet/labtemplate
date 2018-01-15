@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=m1
+comment1.params=
+comment1.target=m1()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=i
+comment3.target=void\ colisiune_switch(int)
+comment4.params=
+comment4.target=void\ colisiune1()
+comment5.params=
+comment5.target=void\ colisiune_up()
+comment6.params=
+comment6.target=void\ colisiune_down()
+comment7.params=
+comment7.target=void\ colisiune2()
+numComments=8

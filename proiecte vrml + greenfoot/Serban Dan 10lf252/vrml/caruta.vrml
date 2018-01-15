@@ -1,0 +1,189 @@
+#VRML V2.0 utf8
+
+
+DEF Caruta Group{
+
+children[
+
+
+Transform {
+    translation 0 0 0
+    children [
+     Shape {
+        appearance Appearance {
+          texture ImageTexture {
+               url "lemn.jpg"
+               repeatS FALSE
+               repeatT TRUE
+            }
+         }  
+       geometry Box {
+			size 14 0.2 4
+			
+         }
+       }
+     ]
+   } 
+
+   Transform {
+    translation 0 0.85 -2.5
+	rotation 1 0 0 1.047
+    children [
+     Shape {
+        appearance Appearance {
+          texture ImageTexture {
+               url "lemn.jpg"
+               repeatS FALSE
+               repeatT TRUE
+            }
+         }  
+       geometry Box {
+			size 14 0.2 2
+			
+         }
+       }
+     ]
+   }    
+   
+   
+   Transform {
+    translation 0 0.85 2.5
+	rotation 1 0 0 -1.047
+    children [
+     Shape {
+        appearance Appearance {
+          texture ImageTexture {
+               url "lemn.jpg"
+               repeatS FALSE
+               repeatT TRUE
+            }
+         }  
+       geometry Box {
+			size 14 0.2 2
+			
+         }
+       }
+     ]
+   }
+
+Transform {
+    translation 5 -0.2 0
+	rotation 1 0 0 1.57
+    children [
+     Shape {
+        appearance Appearance {
+          texture ImageTexture {
+               url "iron.jpg"
+               repeatS FALSE
+               repeatT TRUE
+            }
+         }  
+       geometry Cylinder{
+			radius 0.1
+			height 6
+			
+         }
+       }
+     ]
+   }    
+
+  Transform {
+    translation -5 -0.2 0
+	rotation 1 0 0 1.57
+    children [
+     Shape {
+        appearance Appearance {
+          texture ImageTexture {
+               url "iron.jpg"
+               repeatS FALSE
+               repeatT TRUE
+            }
+         }  
+       geometry Cylinder{
+			radius 0.1
+			height 6
+			
+         }
+       }
+     ]
+   }    
+
+Transform {
+    translation -5 -0.2 3
+    children [
+       Inline {
+       url ["roata.vrml"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+Transform {
+    translation 5 -0.2 3
+    children [
+       Inline {
+       url ["roata.vrml"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+Transform {
+    translation -5 -0.2 -3
+    children [
+       Inline {
+       url ["roata.vrml"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+   
+Transform {
+    translation 5 -0.2 -3
+    children [
+       Inline {
+       url ["roata.vrml"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+Transform {
+	scale 1 1 1
+	rotation 0 1 0 1.56
+    translation 6 0 0
+	
+    children [
+       Inline {
+       url ["Al.wrl"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+Sound {
+   source AudioClip {
+      url [ "s1.mp3" ]
+      loop TRUE
+	startTime 0
+	stopTime 0
+   }
+   spatialize TRUE
+   intensity 1
+   minFront 10
+   maxFront 20
+   minBack 10
+   maxBack 20
+}
+
+
+
+
+]
+
+
+
+}
+
+
+

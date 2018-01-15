@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=m2
+comment1.params=a
+comment1.target=m2(int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ increaseScore()
+numComments=4

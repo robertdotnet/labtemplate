@@ -1,0 +1,193 @@
+#VRML V2.0 utf8
+WorldInfo { title "GoldHotTub" info "Created by MyKel D."}
+PROTO Post [field SFVec3f position 0 0 0 field SFFloat radius 0 field SFFloat height 0]
+{
+	Transform {
+		translation	IS position
+		children [
+			Shape {
+				appearance Appearance {
+					material DEF MAT Material {
+						diffuseColor .6 .47 .23
+						emissiveColor .13 .13 .13
+						ambientIntensity .0733
+						shininess .1
+						specularColor .76 .62 .49
+					}
+				}
+				geometry Cylinder {
+						radius IS radius
+						height IS height
+						top FALSE
+				}
+			}
+			Transform {
+				translation	0 1.75 0
+				children [
+					Shape {
+						appearance Appearance {
+							material USE MAT
+						}
+						geometry Cone {
+							height .25
+							bottomRadius IS	radius
+							bottom FALSE
+						}
+					}
+				]
+			}
+		]
+	}
+}
+PROTO Side [
+	field SFVec3f position 0 0 0 
+	field SFVec3f size 0 0 0
+]
+{
+	Collision{
+		children [
+			Transform {
+				translation IS position
+				children [
+					Shape {
+						appearance Appearance {
+							material Material {
+								diffuseColor .4 .38 .13
+								specularColor .43 .2 .2
+								ambientIntensity .0733
+								shininess .07
+							}
+						}
+						geometry Box {size IS size }
+					}
+				]
+			}
+		]
+	}
+}
+PROTO HTSteps [ field SFVec3f position 0 0 0 field SFRotation rotation 0 0 0 0]
+{
+	Collision {
+		children [
+			Transform {
+				translation	IS position
+				rotation IS	rotation
+				children [
+					Side { position .125 0 0  size 1   .0625 8}
+					Side { position .25 .25 0 size .75 .0625 6}
+					Side { position .375 .5 0 size .5  .0625 4}
+				]
+			}
+		]
+	}
+}
+PROTO GoldHotTub [field SFVec3f position 0 0 0
+]
+{
+	Transform {	
+		translation IS position
+		scale .5 1 .5
+		children [
+			Shape {
+				appearance Appearance {
+					texture ImageTexture {
+						url "GHTStone.jpg"
+						repeatS	FALSE
+						repeatT	FALSE
+					}											
+				}
+				geometry ElevationGrid {
+					xDimension 12
+					zDimension 12
+					height [0,0,0,0,0,0,0,0,0,0,0,0
+							0,0,0,0,0,0,0,0,0,0,0,0,
+							0,0,0,0,-1,-1,-1,-1,0,0,0,0,
+				   			0,0,0,-1,-1,-1,-1,-1,-1,0,0,0,
+							0,0,-1,-1,-1,-1,-1,-1,-1,-1,0,0,
+							0,0,-1,-1,-1,-1,-1,-1,-1,-1,0,0,
+							0,0,-1,-1,-1,-1,-1,-1,-1,-1,0,0,
+							0,0,-1,-1,-1,-1,-1,-1,-1,-1,0,0,	
+							0,0,0,-1,-1,-1,-1,-1,-1,0,0,0,
+							0,0,0,0,-1,-1,-1,-1,0,0,0,0,
+							0,0,0,0,0,0,0,0,0,0,0,0,
+							0,0,0,0,0,0,0,0,0,0,0,0							
+					]
+					creaseAngle	.43
+					solid FALSE
+				}
+			}
+			Collision {
+				children [
+					Transform {
+						translation	5.5 -.50625 5.5
+						children [
+							Shape {
+								appearance Appearance {
+									material Material {
+										diffuseColor 0 .12 .14
+										emissiveColor 0 .46 .46
+										ambientIntensity .117
+										shininess .35
+										specularColor 1 1 1
+										transparency .63
+									}
+								}
+								geometry Cylinder {
+									radius 4.75
+									height .85
+								}
+							}
+						]
+					}
+				]
+				collide	FALSE
+			}
+			Side{ position	0 -.5 5.5 size .125 1 11}
+			Side{ position	11 -.5 5.5 size .125 1 11}
+			Side{ position	5.5 -.5 0 size 11 1 .125}
+			Side{ position	5.5 -.5 11 size 11 1 .125}
+			HTSteps{ position -.6 -1 5.5}
+			HTSteps{ position 11.6 -1 5.5 rotation 0 1 0 3.14}
+			HTSteps{ position 5.5 -1 -.6 rotation 0 1 0 -1.57}
+			HTSteps{ position 5.5 -1 11.6 rotation 0 1 0 1.57}
+			Post { position 0 .65 0 radius .25 height 3.25}
+			Post { position 11 .65 0 radius .25 height 3.25}
+			Post { position 0 .65 11 radius .25 height 3.25}
+			Post { position 11 .65 11 radius .25 height 3.25}
+			####   Roof   ####
+			Transform {
+				children [
+					Shape {
+						appearance Appearance {
+							material Material {
+								diffuseColor .52 .26 0
+								emissiveColor .24 0 0
+								transparency .3
+								ambientIntensity .00333
+								shininess .12
+								specularColor .97 .98 .12
+							}
+						}
+						geometry IndexedFaceSet {
+							coord Coordinate {
+								point[ 11.25 2.25 -.25,
+										-.25 2.25 -.25,
+										-.25 2.25 11.25,
+										11.25 2.25 11.25,
+										5.5 3.5 5.5
+									 ]
+							}
+						coordIndex [0 4 3 -1
+									1 2 4 -1
+									2 3 4 -1
+									0 1 4 -1]
+						solid FALSE
+						}
+					}
+				]
+			}
+ 		]
+	}
+}
+
+GoldHotTub {position -2.75 1.125 -2.75 }

@@ -1,0 +1,308 @@
+#VRML V2.0 utf8
+WorldInfo {
+   title "Webolics Tutorial Example"
+   info ["(C) Copyright 2002 Webolics"
+         "atifmuqeet@hotmail.com"]
+}
+
+
+DEF luna Group{
+children[
+Transform {
+	scale 150 150 150
+   translation 500 800 -2500
+   children [
+Inline {
+url ["earth.wrl"]
+bboxCenter 1 1 1
+      }
+     ]
+}
+]
+}
+
+SpotLight {
+on TRUE
+intensity 10
+ambientIntensity 0
+color 1 1 1
+location 400 800 -2500
+direction 0 0 0
+attenuation 1 0 0
+radius 1000
+cutOffAngle 0
+beamWidth 1.57
+}
+
+
+#trees
+DEF tree Group{
+children[
+Transform {
+	scale 10 10 10
+   translation -60 0 -80
+   children [
+Inline {
+url ["tree.vrml"]
+bboxCenter 1 1 1
+      }
+     ]
+}
+]
+}
+
+Transform{
+	translation 130 0 -15 
+	scale 1 1 1
+	children USE tree 
+}
+
+Transform{
+	translation -20 0 -15 
+	scale 1 1 1
+	children USE tree 
+}
+
+Transform{
+	translation 155 0 5 
+	scale 1 1 1
+	children USE tree 
+}
+
+
+#stage
+DEF stage Group{
+children[
+Transform {
+	translation 0 -6 -73
+	scale 10 10 10
+   children [
+Inline {
+url ["GoldHotTub.wrl"]
+      }
+     ]
+}
+]
+}
+
+
+#truck
+DEF truck Group{
+children[
+Transform {
+	translation -44 -5 -30
+	rotation 0 1 0 5
+	scale 0.04 0.04 0.04
+   children [
+Inline {
+url ["truck.wrl"]
+      }
+     ]
+}
+]
+}
+
+
+
+#TextMasina
+Transform {
+	rotation 0 1 0 0.3
+   translation -38.6 1.2 -11.5
+   children [
+      Shape {
+         appearance Appearance {
+            material Material {
+               diffuseColor 1 0 0
+            }
+         }
+         geometry Text {
+            string "Salvare"
+            fontStyle FontStyle {
+               size 3
+               justify "MIDDLE"
+            }
+         }
+      }
+   ]
+}
+
+
+
+
+
+#om1
+DEF crowdguy Group{
+children[
+Transform {
+	translation 0 1.26 0
+	rotation 0 1 0 3.14
+	scale 1.5 1.5 1.5
+   children [
+Inline {
+url ["person.wrl"]
+      }
+     ]
+}
+]
+}
+
+#thecrowd
+Transform{
+	translation 6 0 -1 
+	scale 0.9 1 1
+	children USE crowdguy
+}
+
+Transform{
+	translation 3 0 5 
+	scale 0.7 1 1
+	children USE crowdguy
+}
+
+#crowd group
+DEF crowd Group{
+children[
+Transform{
+	translation 6 0 10 
+	scale 0.9 1 1
+	children USE crowdguy
+}
+
+Transform{
+	translation 10 0 0
+	rotation 0 1 0 0.4
+	scale 1.1 1 1
+	children USE crowdguy
+}
+
+Transform{
+	translation 6 0 -1 
+	scale 0.9 1 1
+	children USE crowdguy
+}
+
+Transform{
+	translation 6 0 -1 
+	scale 0.9 1 1
+	children USE crowdguy
+}
+
+Transform{
+	translation 6 0 -1 
+	scale 0.9 1 1
+	children USE crowdguy
+}
+]
+}
+
+
+Transform{
+	translation 20 0 -1 
+	scale 0.9 1 1
+	children USE crowd
+}
+
+Transform{
+	translation 10 0 -1 
+	scale 0.9 1 1
+	children USE crowd
+}
+
+
+Transform{
+	translation -20 0 -1 
+	scale 0.9 1 1
+	children USE crowd
+}
+
+Transform{
+	translation -10 0 -1 
+	scale 0.9 1 1
+	children USE crowd
+}
+
+
+Transform{
+	translation -10 0 10 
+	scale 0.9 1 1
+	children USE crowd
+}
+
+
+Transform{
+	translation 0 10 -60
+	rotation 0 1 0 3.14
+	scale 0.9 1 1
+	children USE crowdguy
+}
+
+Transform{
+	translation 10 10 -64
+	rotation 0 1 0 3.14
+	scale 0.9 1 1
+	children USE crowdguy
+}
+
+
+Transform{
+	translation -12 10 -64
+	rotation 0 1 0 3.14
+	scale 0.9 1 1
+	children USE crowdguy
+}
+
+
+
+Background {
+skyAngle [ 0.0 0.0]
+skyColor [0 0 1, 0 0 0.6, 1 0 0]
+groundColor [0.5 0.5 0.0]
+backUrl "sky.jpg"
+rightUrl "sky.jpg"
+leftUrl "sky.jpg"
+frontUrl "sky.jpg"
+}
+
+
+Transform {
+   translation 0 -5 0
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "grass.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Box {
+            size 200 0.1 200
+         }
+      }
+   ]
+}
+
+
+
+
+
+#Text
+Transform {
+   translation 0 32 -50
+   children [
+      Shape {
+         appearance Appearance {
+            material Material {
+               diffuseColor 0 0 0
+            }
+         }
+         geometry Text {
+            string "Poserstadt Extreme Fest"
+            fontStyle FontStyle {
+               size 8
+               justify "MIDDLE"
+            }
+         }
+      }
+   ]
+}

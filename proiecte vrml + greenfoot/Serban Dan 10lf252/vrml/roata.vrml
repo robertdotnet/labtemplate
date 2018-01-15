@@ -1,0 +1,47 @@
+#VRML V2.0 utf8
+
+DEF Roata Group{
+
+children[
+
+DEF wheel Transform {
+    translation 0 0 0
+	rotation 1 0 0 -1.5708
+    children [
+     Shape {
+        appearance Appearance {
+          texture ImageTexture {
+               url "wheel.jpg"
+               repeatS FALSE
+               repeatT TRUE
+            }
+         }  
+       geometry Cylinder {
+			radius 1
+			height 0.6
+         }
+       }
+     ]
+   }    
+   
+DEF wheel Transform {
+    translation 0 0 0
+	rotation 1 0 0 -1.5708
+    children [
+     Shape {
+        appearance Appearance {
+          texture ImageTexture {
+               url "roata.jpg"
+               repeatS FALSE
+               repeatT TRUE
+            }
+         }  
+       geometry Cylinder {
+			radius 1.05
+			height 0.58
+         }
+       }
+     ]
+   }    
+]}
+   
