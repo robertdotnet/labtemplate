@@ -1,0 +1,314 @@
+#VRML V2.0 utf8
+
+#Copyright © 2000, 2002 Graham Perrett techuelife@tpg.com.au www4.tpg.com.au/users/gperrett
+
+
+DEF Brad Group{
+
+children[
+Transform {
+   translation 0 0 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "trunchi.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 0.5
+            height 10
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+
+Transform {
+   translation 0 -1.5 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 4
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation 0 -1 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 3.6
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation 0 -0.5 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 3.2
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation 0 0 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 2.8
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation 0 0.5 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 3.2
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation 0 1 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 2.8
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+
+Transform {
+   translation 0 1.5 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 2.4
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+
+Transform {
+   translation 0 2 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 2
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation 0 2.5 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 2.4
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+
+Transform {
+   translation 0 3 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 2
+            height 2.5
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation 0 3.5 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 1.6
+            height 2.25
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+Transform {
+   translation 0 4 -37
+   children [
+      Shape {
+         appearance Appearance {
+			texture ImageTexture {
+				url "brad.jpg"
+				repeatS TRUE
+				repeatT TRUE
+				}
+            material Material {
+               diffuseColor 255 255 255
+            }
+         }
+         geometry Cone {
+            bottomRadius 1.2
+            height 1.75
+            bottom FALSE
+         }
+      }
+   ]
+}
+
+
+]
+}

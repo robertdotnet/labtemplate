@@ -1,0 +1,289 @@
+#VRML V2.0 utf8
+
+
+################ CORP ####################################
+DEF Bulgare Transform {
+translation 0 -1 0
+
+    children [
+    Shape {
+        appearance Appearance {
+		  texture ImageTexture {
+               url "sol.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }  
+       geometry Sphere {
+         radius 1.5
+         }
+       }
+       DEF  See VisibilitySensor {}
+     ]
+   }     
+DEF Middle Transform {
+ translation 0 1.2 0
+  scale 0.7 0.7 0.7
+    children [
+    USE Bulgare
+     ]
+   }     
+DEF head Transform {
+ translation 0 2.1 0
+  scale 0.4 0.4 0.4
+    children [
+    USE Bulgare
+     ]
+   } 
+
+################ OCHI ####################################
+DEF Eye1 Transform {
+	translation 0.27 1.85 0.45
+    children [
+    Shape {
+        appearance Appearance {
+		  texture ImageTexture {
+               url "button.png"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }  
+       geometry Sphere {
+         radius 0.1
+         }
+       }
+	   DEF touch TouchSensor{}
+	   
+     ]
+   }     
+DEF Eye2 Transform {
+    translation -0.53 0 0
+    children [
+    USE Eye1
+	
+     ]
+   }  
+
+   
+DEF animateEye PositionInterpolator{
+	key[0 0.5 1]
+	keyValue[
+	0.27 1.85 0.45
+	0.27 1.85 0
+	0.27 1.85 0.45
+	]
+}
+
+DEF timer TimeSensor {
+   cycleInterval 0.4
+   startTime -1
+   loop FALSE
+   }
+ROUTE touch.touchTime TO timer.startTime
+ROUTE timer.fraction_changed TO animateEye.set_fraction
+ROUTE animateEye.value_changed TO Eye1.translation
+
+   
+################ NAS ####################################
+DEF Nose  Transform {
+    translation 0 1.7 .8
+    rotation 1 0 0 1.57
+    children [
+     Shape {
+        appearance Appearance {
+          texture ImageTexture {
+               url "morcov.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }  
+       geometry Cone {
+         bottomRadius .1
+         height .5
+         }
+       }
+     ]
+   }    
+
+################ PALARIE #################################### 
+  
+DEF Hat Transform  {
+	translation 0.05 0.9 0
+	scale 0.9 0.9 0.9
+	children [
+			
+		Transform {
+			translation 0 1.34 0
+			rotation 0 0 1 -0.12
+			children [
+				Shape {
+					appearance DEF Cilindru Appearance {
+						material Material {
+							diffuseColor 50 0 0
+							specularColor 1 1 2
+							shininess 0.6
+							ambientIntensity 1
+						}
+					}  
+					geometry Cylinder {
+						radius 0.7
+						height 0.05
+					}
+				}
+				]
+			}  
+		Transform {
+			translation 0 1.68 0
+			rotation 0 1 1 -0.12
+			children [
+				Shape {
+					appearance USE Cilindru
+					geometry Cylinder {
+						radius 0.5
+						height 0.6
+					}
+			   }
+			 ]
+			}
+			DEF touch2 TouchSensor{}
+		]
+		
+    }  
+ 
+DEF animateHat PositionInterpolator{
+	key[0 0.5 1]
+	keyValue[
+	0.05 0.9 0
+	0.05 1.9 0
+	0.05 0.9 0
+	]
+}
+
+DEF timer3 TimeSensor {
+   cycleInterval 1
+   startTime -1
+   loop FALSE
+   }
+ROUTE touch2.touchTime TO timer3.startTime
+ROUTE timer3.fraction_changed TO animateHat.set_fraction
+ROUTE animateHat.value_changed TO Hat.translation
+
+ 
+################ Maini #################################### 
+
+DEF Mana1  Transform {
+	translation 1.7 1.2 0
+	rotation 0 0 1 -1.15
+    children [
+		DEF Mana Shape {
+			appearance Appearance {
+				texture ImageTexture {
+					url "lemn2.jpg"
+					repeatS TRUE
+					repeatT TRUE
+					}
+				}  
+				geometry Cylinder {
+					radius 0.08
+					height 2
+			 
+					}
+		    }
+        ]
+    }
+
+DEF Mana2  Transform {
+	translation -1.7 1.2 0
+	rotation 0 0 1 1.13
+    children USE Mana
+    }
+	
+DEF animateMana PositionInterpolator{
+	key[0 0.5 1]
+	keyValue[
+	1.7 1.2 0
+	1.89 1.2 0
+	1.7 1.2 0
+	]
+}
+DEF animateMana2 PositionInterpolator{
+	key[0 0.5 1]
+	keyValue[
+	-1.7 1.2 0
+	-1.89 1.2 0
+	-1.7 1.2 0
+	]
+}
+
+DEF timer2 TimeSensor {
+   cycleInterval 2
+   startTime 0
+   loop TRUE
+   }
+#ROUTE touch.touchTime TO timer.startTime
+ROUTE timer2.fraction_changed TO animateMana.set_fraction
+ROUTE animateMana.value_changed TO Mana1.translation
+ROUTE timer2.fraction_changed TO animateMana2.set_fraction
+ROUTE animateMana2.value_changed TO Mana2.translation
+
+
+################ Nasturi #################################### 
+ 
+DEF Nasture Transform {
+	translation 0 1 0.85
+    children [
+    Shape {
+        appearance Appearance {
+		  material Material {
+				diffuseColor 0 0 0 
+				specularColor 1 1 2
+				#shininess 0.1
+				ambientIntensity 1
+						}
+         }  
+       geometry Sphere {
+         radius 0.1
+         }
+       }
+	   DEF touch TouchSensor{}
+	   
+     ]
+   } 
+Transform{
+	translation 0 -0.6 0.12
+	children USE Nasture
+	}
+	
+Transform{
+	translation 0 -1.2 0.32
+	children USE Nasture
+	}
+	
+Transform{
+	translation 0 -1.8 0.55
+	children USE Nasture
+	}
+	
+Transform{
+	translation 0 -2.4 0.51
+	children USE Nasture
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

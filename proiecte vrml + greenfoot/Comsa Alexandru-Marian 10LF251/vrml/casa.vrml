@@ -1,0 +1,501 @@
+#VRML V2.0 utf8
+
+
+
+DEF Casa Group{
+
+
+
+children[
+
+
+##################  OM DE ZAPADA ###############################################
+Transform {
+	scale 1.7 1.7 1.7
+	rotation 0 1 0 1
+    translation -9 -1.8 -20
+    children [
+       Inline {
+       url ["snowman.vrml"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+
+
+
+##################  CASA ###############################################
+Transform {
+   translation 20 0 -25
+   children [
+   Sound {
+   source AudioClip {
+      url [ "amclassical_silent_night.mp3" ]
+      loop TRUE
+      startTime 0
+ 
+   }
+   spatialize TRUE
+   intensity 1
+   minFront 15
+   maxFront 50
+   minBack 15
+   maxBack 50
+	}
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "brick.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Box {
+            size 30 15 15
+         }
+      }
+   ]
+}
+
+#FEREASTRA ST
+Transform {
+   translation 10 3 -17.5
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "window.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Box {
+            size 5 7 0.1
+         }
+      }
+   ]
+}
+
+#FEREASTRA DR
+Transform {
+   translation 30 3 -17.5
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "window.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Box {
+            size 5 7 0.1
+         }
+      }
+   ]
+}
+
+#USA
+Transform {
+   translation 20 1 -17.5
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "door.png"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Box {
+            size 7 10 0.1
+         }
+      }
+   ]
+}
+
+#SCARA
+Transform {
+   translation 20 -4.5 -16
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "drum2.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Box {
+            size 10 1 4
+         }
+      }
+   ]
+}
+
+#TIGLA FATA
+Transform {
+   rotation 1 0 0 -0.785398
+   translation 20 10.5 -20.5
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "roof.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Box {
+            size 34 13 0.5
+         }
+      }
+   ]
+}
+
+#TIGLA SPATE
+Transform {
+   rotation 1 0 0 0.785398
+   translation 20 10.5 -29.5
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "roof.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Box {
+            size 34 13 0.5
+         }
+      }
+   ]
+}
+
+
+#ST SUS
+Transform {
+	scale 8 8 8 
+    translation 34.99 7 -25
+	rotation 0 1 0 1.5708
+    children [
+       Inline {
+       url ["triangle.wrl"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+#DR SUS
+Transform {
+	scale 8 8 8 
+    translation 5.01 7 -25
+	rotation 0 1 0 1.5708
+    children [
+       Inline {
+       url ["triangle.wrl"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+##################  GARD ###############################################
+
+DEF Gard Group{
+
+children[
+
+#STALP
+DEF Stalp Group{
+
+children[
+Transform {
+   translation 24 -4 0
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "lemn2.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Cylinder {
+				radius 0.3
+				height 5
+				side TRUE
+				bottom TRUE
+				top TRUE
+}
+      }
+   ]
+}
+
+]
+}
+
+#SCANDURA ORIZ
+DEF Scand1 Group{
+
+children[
+Transform {
+   translation 31 -2.2 0.25
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "lemn1.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Box {
+				size 14 0.5 0.2
+}
+      }
+   ]
+}
+
+]
+}
+
+#SCANDURA VERT
+
+DEF Scand2 Group{
+
+children[
+Transform {
+   translation 25 -3.9 0.35
+   children [
+      Shape {
+         appearance Appearance {
+            texture ImageTexture {
+               url "lemn1.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+         geometry Box {
+				size 0.5 5 0.2
+}
+      }
+   ]
+}
+
+]
+}
+
+
+
+Transform{
+	translation 0 -1.5 0
+	children USE Scand1
+	}
+Transform{
+	translation 1 0.1 0
+	children USE Scand2
+	}
+Transform{
+	translation 2 0.2 0
+	children USE Scand2
+	}
+Transform{
+	translation 3 0.3 0
+	children USE Scand2
+	}
+Transform{
+	translation 4 0.4 0
+	children USE Scand2
+	}
+Transform{
+	translation 5 0.5 0
+	children USE Scand2
+	}
+Transform{
+	translation 6 0.6 0
+	children USE Scand2
+	}
+Transform{
+	translation 7 0.5 0
+	children USE Scand2
+	}
+Transform{
+	translation 8 0.4 0
+	children USE Scand2
+	}
+Transform{
+	translation 9 0.3 0
+	children USE Scand2
+	}
+Transform{
+	translation 10 0.2 0
+	children USE Scand2
+	}
+Transform{
+	translation 11 0.1 0
+	children USE Scand2
+	}
+Transform{
+	translation 12 0 0
+	children USE Scand2
+	}
+
+]
+}
+
+
+Transform{
+	rotation 0 1 0 1.5708
+	translation 38 0 24
+	children USE Gard
+	}
+Transform{
+	rotation 0 1 0 1.5708
+	translation 38 0 10
+	children USE Gard
+	}
+Transform{
+	rotation 0 1 0 1.5708
+	translation 38 0 -4
+	children USE Gard
+	}
+Transform{
+	translation -21 0 0
+	children USE Gard
+	}
+Transform{
+	translation -7 0 0
+	children USE Stalp
+	}
+Transform{
+	translation -21 0 0
+	children USE Gard
+	}
+Transform{
+	translation -35 0 0
+	children USE Gard
+	}
+Transform{
+	translation -49 0 0
+	children USE Gard
+	}
+
+Transform{
+	rotation 0 1 0 -1.5708
+	translation -25 0 -38
+	children USE Gard
+	}
+Transform{
+	rotation 0 1 0 -1.5708
+	translation -25 0 -38
+	children USE Gard
+	}
+Transform{
+	rotation 0 1 0 -1.5708
+	translation -25 0 -52
+	children USE Gard
+	}
+Transform{
+	rotation 0 1 0 -1.5708
+	translation -25 0 -66
+	children USE Gard
+	}
+	
+Transform{
+	rotation 0 1 0 3.14159
+	translation 13 0 -42
+	children USE Gard
+	}
+Transform{
+	rotation 0 1 0 3.14159
+	translation 27 0 -42
+	children USE Gard
+	}
+Transform{
+	rotation 0 1 0 3.14159
+	translation 41 0 -42
+	children USE Gard
+	}
+Transform{
+	rotation 0 1 0 3.14159
+	translation 62 0 -42
+	children USE Gard
+	}
+Transform{
+	rotation 0 1 0 3.14159
+	translation 50 0 -42
+	children USE Gard
+	}
+##################  BRAZI ###############################################
+Transform {
+	scale 1 1 1
+    translation 0 0 0
+    children [
+       Inline {
+       url ["brad.vrml"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+Transform {
+	scale 0.6 0.6 0.6
+    translation -10 -2 -15
+    children [
+       Inline {
+       url ["brad.vrml"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+Transform {
+	scale 1 1 1
+    translation -20 0 0
+    children [
+       Inline {
+       url ["brad.vrml"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+Transform {
+	scale 0.6 0.6 0.6
+    translation -20 -2 -5
+    children [
+       Inline {
+       url ["brad.vrml"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+Transform {
+	scale 1 1 1
+    translation -20 0 20
+    children [
+       Inline {
+       url ["brad.vrml"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+Transform {
+	scale 0.6 0.6 0.6
+    translation -20 -2 15
+    children [
+       Inline {
+       url ["brad.vrml"]
+       bboxCenter 1 1 1
+      }
+     ]
+}
+
+
+#ENDcasa
+]
+}

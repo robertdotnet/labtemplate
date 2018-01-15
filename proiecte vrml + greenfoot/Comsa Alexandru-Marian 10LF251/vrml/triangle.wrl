@@ -1,0 +1,26 @@
+#VRML V2.0 utf8
+
+
+Shape {
+	appearance Appearance {
+            texture ImageTexture {
+               url "brick.jpg"
+               repeatS TRUE
+               repeatT TRUE
+            }
+         }
+	geometry IndexedFaceSet {
+		solid FALSE
+		coord Coordinate {
+			point [
+				#The 3 locations for each of the triangle's points
+				-1  0  0  #point 0 x,y,z values = left base
+				 1  0  0  #point 1 x,y,z values = right base
+				 0  1  0  #point 2 x,y,z values = top
+			]
+		}
+		coordIndex [
+			0 1 2	#join the 3 points to make a triangle in anti-clockwise order
+		]
+	}
+}

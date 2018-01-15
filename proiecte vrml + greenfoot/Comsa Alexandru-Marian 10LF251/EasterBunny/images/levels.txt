@@ -1,0 +1,6 @@
+Level1:30-oua--care se respameaza,fara lupi,poti trece prin perete
+Level2:20-oua--care se respameaza,un lup incet,poti trece prin perete
+Level3:20-oua,un lup putin mai rapid,poti trece prin perete
+Level4:10-oua--care se respameaza,doi lup putin mai rapizi, poti trece prin perete
+Level5:5-oua--care se respameaza,doi lupi rapizi, NU poti trece prin perete
+Level6:1-ou--care se respameaza,trei lup rapizi,NU trece prin perete

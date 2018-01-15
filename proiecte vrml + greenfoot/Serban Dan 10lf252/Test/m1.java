@@ -15,7 +15,7 @@ public class m1 extends Actor
         img.scale(200,120);
         img1.scale(230,221);
         img2.scale(230,221);
-        devmod=1;
+        devmod=0;
         setImage(img);
         
     }

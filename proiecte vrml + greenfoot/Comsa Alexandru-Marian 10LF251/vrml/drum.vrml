@@ -1,0 +1,106 @@
+#VRML V2.0 utf8
+
+DEF Drum Group{
+
+children[
+
+Transform {
+   translation 0 -4.99 8
+   children [
+      DEF drum_2 Shape {
+         appearance Appearance {
+			
+            texture ImageTexture {
+               url "drumul.jpg"
+               repeatS TRUE
+               repeatT TRUE
+			   
+            }
+         }
+         geometry Box {
+            size 40 0.1 20
+         }
+      }
+   ]
+}
+
+Transform{
+	translation -40 -4.99 8
+	children USE drum_2
+}
+
+Transform{
+	translation -80 -4.99 8
+	children USE drum_2
+}
+
+Transform{
+	translation -120 -4.99 8
+	children USE drum_2
+}
+
+
+Transform{
+	translation 40 -4.99 8
+	children USE drum_2
+}
+
+Transform{
+	translation 80 -4.99 8
+	children USE drum_2
+}
+
+Transform{
+	translation 120 -4.99 8
+	children USE drum_2
+}
+
+
+
+
+
+
+Transform{
+	rotation 0 1 0 3.14159
+	translation 0 -4.99 28
+	children USE drum_2
+}
+
+Transform{
+	rotation 0 1 0 3.14159
+	translation -40 -4.99 28
+	children USE drum_2
+}
+
+Transform{
+	rotation 0 1 0 3.14159
+	translation -80 -4.99 28
+	children USE drum_2
+}
+
+Transform{
+	rotation 0 1 0 3.14159
+	translation -120 -4.99 28
+	children USE drum_2
+}
+
+Transform{
+	rotation 0 1 0 3.14159
+	translation 40 -4.99 28
+	children USE drum_2
+}
+
+Transform{
+	rotation 0 1 0 3.14159
+	translation 80 -4.99 28
+	children USE drum_2
+}
+
+Transform{
+	rotation 0 1 0 3.14159
+	translation 120 -4.99 28
+	children USE drum_2
+}
+
+]
+}
