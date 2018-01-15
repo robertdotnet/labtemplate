@@ -1,22 +1,20 @@
 body{
-    height: 200%
+    position: relative;
+    width: 100%;
+    height: 94.8%;
+    background: url('/assets/faqPageBackground.png') no-repeat;
+    background-size: 100%;
+    background-position: top center;
 }
-img{
-    align-self:center
-    
-}
-
 
 li {
     list-style-type: value;
     display: block;
-    color: cornflowerblue;
+    color: rgb(0, 48, 138);
     text-align: left;
     font-size: 20px;
     font-weight: bold;
-    padding: 14px 50px;
-   
-
+    margin: 12%;
 }
 
 
@@ -24,11 +22,10 @@ h1{
     display: block;
     text-align: center;
     padding: 14px 50px;
-
 }
 
 p{
-    width:50%;
+    width:100%;
     font-weight: normal;
     text-indent: 50px;
     font-size: 17px;
@@ -36,6 +33,7 @@ p{
     color:aqua;
     text-align: left;
     background: gray;
+    margin: 1%;
    
 }
 
@@ -44,4 +42,29 @@ p{
     background: url('/assets/FAQ.jpg') no-repeat center;
     background-size: 100%;
     background-position: top center;
+}
+
+.questions-container {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate( -50%,0);
+    width: 70%;
+    height: 50%;
+    line-height: 130%;
+    border:2px dashed black;
+    border-radius: 10px;
+    padding: 20px;    
+    background-color:rgba(87, 87, 87, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bottom-icons-container {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate( -50%,0);
+    width: 13%;
+    height: 2%;
+    overflow: hidden;
 }
