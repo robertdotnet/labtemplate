@@ -1,6 +1,71 @@
 .bg{
+    position: relative;
     width: 100%;
-    background: url('/assets/travelRoutesBackground.jpg') no-repeat center;
+    height: 94.8%;
+    background: url('/assets/travelRoutesPageBackground.png') no-repeat;
     background-size: 100%;
     background-position: top center;
+}
+.container-two {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate( -50%,0);
+    width: 80%;
+    height: 50%;
+    overflow: hidden;
+    border:1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+    margin: 10%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
